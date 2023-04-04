@@ -1,0 +1,44 @@
+version: "3"
+
+services:
+  strapiexample:
+    image: naskio/strapi
+    container_name: strapiexample
+    restart: unless-stopped
+    environment:
+      DATABASE_CLIENT: postgres
+      DATABASE_NAME: strapi
+      DATABASE_HOST: dbexample
+      DATABASE_PORT: 5432
+      DATABASE_USERNAME: strapi
+      DATABASE_PASSWORD: password
+      NODE_ENV: development
+    networks:
+      - strapi-app-network
+    volumes:
+      - strapidata:/srv/app
+    ports:
+      - "1337:1337"
+
+  dbexample:
+    image: postgres
+    container_name: dbexample
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: strapi
+      POSTGRES_USER: strapi
+      POSTGRES_PASSWORD: password
+    networks:
+      - strapi-app-network
+    volumes:
+      - strapidb:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+networks:
+  strapi-app-network:
+    driver: bridge
+
+volumes:
+  strapidata:
+  strapidb:

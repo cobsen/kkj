@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "../ntn-boilerplate"
+    }
+  ],
+  "settings": {
+    "volar.autoCompleteRefs": true,
+    "volar.codeLens.scriptSetupTools": true,
+    "volar.icon.splitEditors": true,
+    "eslint.format.enable": true,
+    "editor.formatOnSave": true
+  }
+}
