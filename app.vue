@@ -17,7 +17,7 @@ import Konferenz from "./components/Konferenz.vue";
 import Charta from "./components/Charta.vue";
 import Blog from "./components/Blog.vue";
 import Studie from "./components/Studie.vue";
-import "@fontsource/antonio";
+import "@fontsource/space-grotesk";
 </script>
 
 <style lang="scss">
@@ -34,17 +34,23 @@ section {
   }
 }
 body {
-  background: rgb(0, 212, 255);
+  font-family: "Space Grotesk", sans-serif;
+  background: rgba(#cedef2, 1);
   background: repeating-linear-gradient(
     105deg,
-    rgba(0, 212, 255, 1),
-    rgba(50, 212, 52, 1),
-    rgba(50, 212, 52, 1),
-    rgba(200, 6, 137, 1),
-    rgba(200, 6, 137, 1),
-    rgba(0, 212, 255, 1) 100vh
+    rgba(#cedef2, 1),
+    rgba(#cedef2, 1),
+    rgba(#f8b993, 1),
+    rgba(#f8b993, 1),
+    rgba(#f7a9a0, 1),
+    rgba(#f7a9a0, 1),
+    rgba(#9ef2db, 1),
+    rgba(#9ef2db, 1),
+    rgba(#4a97fa, 1),
+    rgba(#4a97fa, 1),
+    rgba(#cedef2, 1),
+    rgba(#cedef2, 1) 200vh
   );
-  font-family: "Antonio", sans-serif;
 }
 body::-webkit-scrollbar {
   width: 6px;
