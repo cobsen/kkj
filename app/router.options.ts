@@ -1,7 +1,4 @@
 import type { RouterConfig } from "@nuxt/schema";
-import { useScroll } from "@vueuse/core";
-
-//const { isScrolling } = useScroll(document);
 
 // https://router.vuejs.org/api/#routeroptions
 export default <RouterConfig>{
@@ -49,9 +46,6 @@ export default <RouterConfig>{
   ],
 
   scrollBehavior(to, from, savedPosition) {
-    const { isScrolling } = useScroll(document);
-    console.debug("scroll check", isScrolling.value);
-
     if (to.path === "/" || to.fullPath === from.fullPath)
       return { el: "#" + to.name?.toString() };
     return { el: "#" + to.name?.toString(), behavior: "smooth" };

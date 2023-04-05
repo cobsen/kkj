@@ -1,7 +1,11 @@
 <template>
   <div id="main">
     <Navigation />
-    <OverlayScrollbarsComponent defer>
+    <OverlayScrollbarsComponent
+      defer
+      :options="{ scrollbars: { autoHide: 'move' } }"
+      :events="{ scroll: foo }"
+    >
       <div id="content">
         <div><div class="label">Konferenz</div></div>
         <Konferenz />
@@ -29,7 +33,21 @@ import Blog from "./components/Blog.vue";
 import Studie from "./components/Studie.vue";
 import "@fontsource/space-grotesk";
 import "overlayscrollbars/overlayscrollbars.css";
-import { OverlayScrollbarsComponent } from "overlayscrollbars-vue";
+import {
+  OverlayScrollbarsComponent,
+  OverlayScrollbarsComponentRef,
+} from "overlayscrollbars-vue";
+import { ref, onMounted } from "vue";
+
+const body = ref<HTMLBodyElement | null>(null);
+
+onMounted(() => {
+  body.value = document.getElementsByTagName("body")[0];
+});
+
+function foo(_instance: OverlayScrollbarsComponentRef, scroll: Event) {
+  body.value.style.backgroundSize = 100 + scroll.target?.scrollTop / 50 + "%";
+}
 </script>
 
 <style lang="scss">
@@ -69,6 +87,7 @@ section {
   }
   .content {
     white-space: pre-wrap;
+    padding: 0 8px;
   }
 }
 body {
@@ -91,15 +110,10 @@ body {
     rgba(#cedef2, 1),
     rgba(#cedef2, 1) 200vh
   );
+  background-position-x: 100vw;
+  background-position-y: 100vh;
 }
-body::-webkit-scrollbar {
-  width: 6px;
-  height: auto;
-}
-body::-webkit-scrollbar-thumb {
-  background: red;
-}
-body::-webkit-scrollbar-track {
-  background: yellow;
+.os-scrollbar {
+  margin: 32px 0;
 }
 </style>
