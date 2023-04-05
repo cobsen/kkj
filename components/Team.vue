@@ -1,26 +1,29 @@
 <template>
   <section id="team">
-    <div v-for="member in members">
-      {{ member.attributes.Name }}<br />
-      {{ member.attributes.Beschreibung }}<br />
-
-      <img
-        :src="
-          'http://localhost:1337' +
-          member.attributes.Bild?.data?.attributes?.formats.thumbnail.url
-        "
-      />
+    <div class="members">
+      <div v-for="member in members">
+        <img
+          :src="
+            'http://localhost:1337' +
+            member.attributes.Bild?.data?.attributes?.formats.thumbnail.url
+          "
+        /><br />
+        <h4>{{ member.attributes.Name }}</h4>
+        {{ member.attributes.Beschreibung }}<br />
+      </div>
     </div>
-    <div v-for="partner in partners">
-      {{ partner.attributes.Name }}<br />
-      {{ partner.attributes.Beschreibung }}<br />
 
-      <img
-        :src="
-          'http://localhost:1337' +
-          partner.attributes.Logo?.data?.attributes?.formats.thumbnail.url
-        "
-      />
+    <div class="partners">
+      <div v-for="partner in partners">
+        <img
+          :src="
+            'http://localhost:1337' +
+            partner.attributes.Logo?.data?.attributes?.formats.thumbnail.url
+          "
+        />
+        <h4>{{ partner.attributes.Name }}</h4>
+        {{ partner.attributes.Beschreibung }}<br />
+      </div>
     </div>
   </section>
 </template>
@@ -60,5 +63,16 @@ const partners = computed(() => {
 
 <style lang="scss" scoped>
 section {
+}
+.members {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 12px;
+  margin-bottom: 48px;
+}
+.partners {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 12px;
 }
 </style>
