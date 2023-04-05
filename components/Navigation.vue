@@ -1,5 +1,6 @@
 <template>
   <nav>
+    <h1>Konferenz für Konstruktiven Journalismus 2023</h1>
     <ul>
       <li>
         <NuxtLink :to="{ name: 'konferenz' }">Konferenz</NuxtLink>
@@ -17,7 +18,7 @@
         <NuxtLink :to="{ name: 'team' }">Team</NuxtLink>
       </li>
       <li>
-        <NuxtLink :to="{ name: 'impressum' }">Imppressum & Kontakt</NuxtLink>
+        <NuxtLink :to="{ name: 'impressum' }">Impressum & Kontakt</NuxtLink>
       </li>
       <li>
         <NuxtLink :to="{ name: 'datenschutz' }">Datenschutz</NuxtLink>
@@ -29,20 +30,28 @@
 <script setup lang="ts"></script>
 
 <style lang="scss">
-nav {
-  position: fixed;
-  height: 100vh;
-  width: 300px;
+h1 {
+  margin: 0;
 }
 ul {
   list-style: none;
-  text-align: right;
-  margin-right: 24px;
-  position: absolute;
-  top: 30vh;
-  right: 0;
-  transform: translateY(-50%);
+  padding: 8px 0;
+  border-top: 3px solid $main;
+  border-bottom: 3px solid $main;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
   li {
+    margin-right: 16px;
+    a,
+    a:visited,
+    a:active,
+    a:hover {
+      color: $main;
+      text-decoration: none;
+      font-weight: bold;
+    }
     .router-link-active {
       font-weight: bold;
     }

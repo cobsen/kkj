@@ -13,27 +13,27 @@ export default <RouterConfig>{
     },
     {
       name: "konferenz",
-      path: "/konferenz",
+      path: "/#konferenz",
       component: () => import("~/app.vue").then((r) => r.default || r),
     },
     {
       name: "charta",
-      path: "/charta",
+      path: "/#charta",
       component: () => import("~/app.vue").then((r) => r.default || r),
     },
     {
       name: "studie",
-      path: "/studie",
+      path: "/#studie",
       component: () => import("~/app.vue").then((r) => r.default || r),
     },
     {
       name: "blog",
-      path: "/blog",
+      path: "/#blog",
       component: () => import("~/app.vue").then((r) => r.default || r),
     },
     {
       name: "team",
-      path: "/team",
+      path: "/#team",
       component: () => import("~/app.vue").then((r) => r.default || r),
     },
     {

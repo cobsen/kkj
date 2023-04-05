@@ -1,6 +1,5 @@
 <template>
   <section id="team">
-    <h1 ref="$headline">Das Team</h1>
     <div v-for="member in members">
       {{ member.attributes.Name }}<br />
       {{ member.attributes.Beschreibung }}<br />
@@ -61,7 +60,5 @@ const partners = computed(() => {
 
 <style lang="scss" scoped>
 section {
-  min-height: 80vh;
-  background: $team;
 }
 </style>

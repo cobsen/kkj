@@ -1,6 +1,5 @@
 <template>
   <section id="studie">
-    <h1 ref="$headline">Studie</h1>
     <div class="content" v-html="studie.Inhalt"></div>
     <pre>{{ studie.PDF?.data?.attributes }}</pre>
   </section>
@@ -33,7 +32,5 @@ const { stop } = useIntersectionObserver(
 
 <style lang="scss" scoped>
 section {
-  min-height: 80vh;
-  background: $studie;
 }
 </style>

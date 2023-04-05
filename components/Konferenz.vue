@@ -1,6 +1,5 @@
 <template>
   <section id="konferenz">
-    <h1>Konferenz</h1>
     <div class="content" v-html="konferenz.Inhalt"></div>
   </section>
 </template>
@@ -19,7 +18,5 @@ const konferenz = computed(() => {
 
 <style lang="scss" scoped>
 section {
-  min-height: 80vh;
-  background: $konferenz;
 }
 </style>

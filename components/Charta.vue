@@ -1,6 +1,5 @@
 <template>
   <section id="charta">
-    <h1>Charta</h1>
     <div class="content" v-html="charta.Inhalt"></div>
     <pre>{{ charta.PDF?.data?.attributes }}</pre>
   </section>
@@ -22,7 +21,5 @@ const charta = computed(() => {
 
 <style lang="scss" scoped>
 section {
-  min-height: 80vh;
-  background: $charta;
 }
 </style>
