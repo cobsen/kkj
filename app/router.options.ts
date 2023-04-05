@@ -46,6 +46,9 @@ export default <RouterConfig>{
   ],
 
   scrollBehavior(to, from, savedPosition) {
+    console.debug("1", to);
+    console.debug("2", from);
+    console.debug("3", "#" + to.name?.toString());
     if (to.path === "/" || to.fullPath === from.fullPath)
       return { el: "#" + to.name?.toString() };
     return { el: "#" + to.name?.toString(), behavior: "smooth" };

@@ -7,7 +7,12 @@
       :events="{ scroll: foo }"
     >
       <div id="content">
-        <div><div class="label">Konferenz</div></div>
+        <div>
+          <img class="stripes" src="~/public/logo02-01.svg" />
+          <div class="label">
+            <img src="~/public/logo01-01.svg" />
+          </div>
+        </div>
         <Konferenz />
         <div><div class="label">Charta</div></div>
         <Charta />
@@ -46,7 +51,8 @@ onMounted(() => {
 });
 
 function foo(_instance: OverlayScrollbarsComponentRef, scroll: Event) {
-  body.value.style.backgroundSize = 100 + scroll.target?.scrollTop / 50 + "%";
+  if (body.value)
+    body.value.style.backgroundSize = 100 + scroll.target?.scrollTop / 50 + "%";
 }
 </script>
 
@@ -65,6 +71,9 @@ function foo(_instance: OverlayScrollbarsComponentRef, scroll: Event) {
   display: grid;
   grid-template-columns: 300px 1fr;
   grid-gap: 24px;
+  & > :first-child {
+    position: relative;
+  }
 }
 
 .label {
@@ -73,6 +82,12 @@ function foo(_instance: OverlayScrollbarsComponentRef, scroll: Event) {
   text-align: right;
   position: sticky;
   top: 0px;
+}
+
+.stripes {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 section {
@@ -88,6 +103,8 @@ section {
   .content {
     white-space: pre-wrap;
     padding: 0 8px;
+    column-count: 2;
+    column-gap: 24px;
   }
 }
 body {
