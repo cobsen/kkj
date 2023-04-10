@@ -18,12 +18,14 @@ import { computed } from "vue";
 
 const { find } = useStrapi();
 
-const response = await find<Blogeintrag>("blogeintrags", {
-  populate: "Media",
-});
+const response = await useAsyncData("blogeintrags", () =>
+  find<Blogeintrag>("blogeintrags", {
+    populate: "Media",
+  })
+);
 
 const blogposts = computed(() => {
-  return response?.data ?? [];
+  return response?.data.value?.data ?? [];
 });
 </script>
 

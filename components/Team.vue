@@ -45,19 +45,23 @@ const { stop } = useIntersectionObserver(
 
 const { find } = useStrapi();
 
-const response2 = await find<Partner>("partners", {
-  populate: "Logo",
-});
-const response = await find<Teammitglied>("teammitglieder", {
-  populate: "Bild",
-});
+const response2 = await useAsyncData("partners", () =>
+  find<Partner>("partners", {
+    populate: "Logo",
+  })
+);
+const response = await useAsyncData("teammitglieder", () =>
+  find<Teammitglied>("teammitglieder", {
+    populate: "Bild",
+  })
+);
 
 const members = computed(() => {
-  return response?.data ?? [];
+  return response?.data.value?.data ?? [];
 });
 
 const partners = computed(() => {
-  return response2?.data ?? [];
+  return response2?.data.value?.data ?? [];
 });
 </script>
 

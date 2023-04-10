@@ -14,4 +14,11 @@ export default defineNuxtConfig({
       },
     },
   },
+  target: "static",
+  experimental: {
+    payloadExtraction: true,
+  },
+  generate: {
+    routes: ["/"],
+  },
 });

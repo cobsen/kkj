@@ -3,23 +3,23 @@
     <h1>Konferenz für Konstruktiven Journalismus 2023</h1>
     <ul>
       <li>
-        <NuxtLink :to="{ name: 'home', hash: '#konferenz' }"
+        <NuxtLink :to="{ name: 'index', hash: '#konferenz' }"
           >Konferenz</NuxtLink
         >
       </li>
       <li>
-        <NuxtLink :to="{ name: 'home', hash: '#charta' }">Charta</NuxtLink>
+        <NuxtLink :to="{ name: 'index', hash: '#charta' }">Charta</NuxtLink>
       </li>
       <li>
-        <NuxtLink :to="{ name: 'home', hash: '#studie' }">Studie</NuxtLink>
+        <NuxtLink :to="{ name: 'index', hash: '#studie' }">Studie</NuxtLink>
       </li>
       <li>
-        <NuxtLink :to="{ name: 'home', hash: '#blog' }"
+        <NuxtLink :to="{ name: 'index', hash: '#blog' }"
           >Blog und Newsletter</NuxtLink
         >
       </li>
       <li>
-        <NuxtLink :to="{ name: 'home', hash: '#team' }">Team</NuxtLink>
+        <NuxtLink :to="{ name: 'index', hash: '#team' }">Team</NuxtLink>
       </li>
       <li>
         <NuxtLink :to="{ name: 'impressum' }">Impressum & Kontakt</NuxtLink>

@@ -12,12 +12,14 @@ import { Studie } from "~/assets/types";
 
 const { findOne } = useStrapi();
 
-const response = await findOne<Studie>("studie", {
-  populate: "PDF",
-});
+const response = await useAsyncData("studie", () =>
+  findOne<Studie>("studie", {
+    populate: "PDF",
+  })
+);
 
 const studie = computed(() => {
-  return response?.data.attributes ?? null;
+  return response?.data.value?.data.attributes ?? null;
 });
 
 const $headline = ref(null);

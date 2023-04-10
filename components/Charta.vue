@@ -10,12 +10,14 @@ import { Charta } from "~/assets/types";
 
 const { findOne } = useStrapi();
 
-const response = await findOne<Charta>("charta", {
-  populate: "PDF",
-});
+const response = await useAsyncData("charta", () =>
+  findOne<Charta>("charta", {
+    populate: "PDF",
+  })
+);
 
 const charta = computed(() => {
-  return response?.data.attributes ?? null;
+  return response?.data.value?.data.attributes ?? null;
 });
 </script>
 

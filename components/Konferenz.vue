@@ -9,10 +9,12 @@ import { Konferenz } from "~/assets/types";
 
 const { findOne } = useStrapi();
 
-const response = await findOne<Konferenz>("konferenz");
+const response = await useAsyncData("konferenz", () =>
+  findOne<Konferenz>("konferenz")
+);
 
 const konferenz = computed(() => {
-  return response?.data.attributes ?? null;
+  return response?.data.value?.data.attributes ?? null;
 });
 </script>
 

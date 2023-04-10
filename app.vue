@@ -6,42 +6,17 @@
       :options="{ scrollbars: { autoHide: 'move' } }"
       :events="{ scroll: foo }"
     >
-      <div id="content">
-        <div>
-          <img class="stripes" src="~/public/logo02-01.svg" />
-          <div class="label">
-            <img src="~/public/logo01-01.svg" />
-          </div>
-        </div>
-        <Konferenz />
-        <div><div class="label">Charta</div></div>
-        <Charta />
-        <div><div class="label">Studie</div></div>
-        <Studie />
-        <div>
-          <div class="label">Blog &<br />Newsletter</div>
-        </div>
-        <Blog />
-        <div><div class="label">Team</div></div>
-        <Team />
-      </div>
+      <NuxtPage />
     </OverlayScrollbarsComponent>
   </div>
 </template>
 
 <script setup lang="ts">
 import Navigation from "./components/Navigation.vue";
-import Team from "./components/Team.vue";
-import Konferenz from "./components/Konferenz.vue";
-import Charta from "./components/Charta.vue";
-import Blog from "./components/Blog.vue";
-import Studie from "./components/Studie.vue";
 import "@fontsource/space-grotesk";
 import "overlayscrollbars/overlayscrollbars.css";
-import {
-  OverlayScrollbarsComponent,
-  OverlayScrollbarsComponentRef,
-} from "overlayscrollbars-vue";
+import { OverlayScrollbarsComponent } from "overlayscrollbars-vue/overlayscrollbars-vue.es.js";
+import type { OverlayScrollbarsComponentRef } from "overlayscrollbars-vue";
 import { ref, onMounted } from "vue";
 
 const body = ref<HTMLBodyElement | null>(null);
