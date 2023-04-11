@@ -1,9 +1,9 @@
 <template>
   <div id="content">
     <div>
-      <img class="stripes" src="~/public/logo02-01.svg" />
+      <img class="stripes" src="../src/logo02-01.svg" />
       <div class="label">
-        <img src="~/public/logo01-01.svg" />
+        <img src="../src/logo01-01.svg" />
       </div>
     </div>
     <Konferenz />
