@@ -4,7 +4,8 @@
       <h3>{{ post.attributes.Titel }}</h3>
       <div class="content" v-html="post.attributes.Inhalt"></div>
 
-      <img
+      <nuxt-img
+        format="avif"
         :src="'http://localhost:1337' + media.attributes?.formats.large.url"
         v-for="media in post.attributes.Media?.data"
       />

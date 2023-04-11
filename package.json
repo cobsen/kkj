@@ -9,6 +9,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxt/image-edge": "^1.0.0-28008586.381b906",
     "@nuxtjs/strapi": "^1.9.0",
     "@nuxtjs/style-resources": "^1.2.1",
     "node-sass": "^8.0.0",

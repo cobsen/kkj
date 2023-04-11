@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/strapi"],
+  modules: ["@nuxtjs/strapi", "@nuxt/image-edge"],
   strapi: {
     // Options
   },
@@ -20,5 +20,15 @@ export default defineNuxtConfig({
   },
   generate: {
     routes: ["/"],
+  },
+  buildModules: ["@nuxt/image-edge"],
+  image: {
+    strapi: {
+      baseURL: "http://localhost:1337/",
+    },
+
+    staticFilename: "[publicPath]/images/[name]-[hash][ext]",
+    domains: ["localhost", "localhost:1337"],
+    dir: "static",
   },
 });

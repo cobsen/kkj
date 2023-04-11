@@ -2,7 +2,7 @@
   <section id="team">
     <div class="members">
       <div v-for="member in members">
-        <img
+        <nuxt-img
           :src="
             'http://localhost:1337' +
             member.attributes.Bild?.data?.attributes?.formats.thumbnail.url
@@ -15,7 +15,7 @@
 
     <div class="partners">
       <div v-for="partner in partners">
-        <img
+        <nuxt-img
           :src="
             'http://localhost:1337' +
             partner.attributes.Logo?.data?.attributes?.formats.thumbnail.url
