@@ -232,7 +232,7 @@ watch(search, (newHash, _) => {
   bottom: 0;
   right: 0;
   overflow: hidden;
-  background: rgb(214, 133, 133);
+  background: #fca58d;
   svg {
     height: 100%;
     width: 100%;
@@ -242,7 +242,7 @@ watch(search, (newHash, _) => {
 section {
   box-sizing: border-box;
   margin-bottom: 48px;
-  &:before {
+  &.divided:before {
     content: " ";
     display: block;
     margin: 23px 20px 23px 0;

@@ -1,33 +1,28 @@
 <template>
   <div class="foo">
-    <img class="stripes" src="../src/logo02-01.svg" />
+    <img class="stripes" src="../src/logo01-01.svg" />
   </div>
   <div id="content">
     <div>
-      <div class="label">
-        <img src="../src/logo01-01.svg" />
-      </div>
+      <div class="label">Konferenz</div>
     </div>
     <Konferenz />
     <div><div class="label">Charta</div></div>
     <Charta />
     <div>
       <div class="label">
-        <img src="../src/kkj_studie_icon.svg" />
         <div>Studie</div>
       </div>
     </div>
     <Studie />
     <div>
       <div class="label">
-        <img src="../src/kkj_blog_icon.svg" />
         <div>Blog &<br />Newsletter</div>
       </div>
     </div>
     <Blog />
     <div>
       <div class="label">
-        <img src="../src/kkj_team_icon.svg" />
         <div>Team</div>
       </div>
     </div>
@@ -52,8 +47,9 @@
   line-height: 1;
   text-align: right;
   position: sticky;
-  top: 0px;
+  top: 100px;
   height: 100px;
+  font-weight: bold;
   img {
     position: absolute;
     top: 0;

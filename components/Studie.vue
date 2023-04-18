@@ -1,5 +1,5 @@
 <template>
-  <section id="studie">
+  <section id="studie" class="divided">
     <div class="content" v-html="studie.Inhalt"></div>
     <a :href="host + studie.PDF?.data?.attributes?.url"><button>PDF</button></a>
     <pre>{{ studie.PDF?.data?.attributes }}</pre>

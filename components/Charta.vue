@@ -1,5 +1,5 @@
 <template>
-  <section id="charta">
+  <section id="charta" class="divided">
     <div class="content" v-html="charta.Inhalt"></div>
     <a :href="host + charta.PDF?.data?.attributes?.url"><button>PDF</button></a>
   </section>
