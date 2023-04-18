@@ -53,6 +53,7 @@
   text-align: right;
   position: sticky;
   top: 0px;
+  height: 100px;
   img {
     position: absolute;
     top: 0;

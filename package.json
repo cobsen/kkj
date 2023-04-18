@@ -10,9 +10,12 @@
   },
   "devDependencies": {
     "@nuxt/image-edge": "^1.0.0-28008586.381b906",
+    "@nuxt/kit-edge": "^3.4.2-28023560.53db8125",
     "@nuxtjs/strapi": "^1.9.0",
     "@nuxtjs/style-resources": "^1.2.1",
     "@vueuse/router": "^9.13.0",
+    "cheerio": "^1.0.0-rc.12",
+    "fs-extra": "^11.1.1",
     "node-sass": "^8.0.0",
     "nuxt": "^3.3.2",
     "sass": "^1.60.0",

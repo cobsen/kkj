@@ -1,6 +1,7 @@
 <template>
   <section id="studie">
     <div class="content" v-html="studie.Inhalt"></div>
+    <a :href="host + studie.PDF?.data?.attributes?.url"><button>PDF</button></a>
     <pre>{{ studie.PDF?.data?.attributes }}</pre>
   </section>
 </template>
@@ -20,6 +21,13 @@ const response = await useAsyncData("studie", () =>
 
 const studie = computed(() => {
   return response?.data.value?.data.attributes ?? null;
+});
+
+const host = computed(() => {
+  if (process.server && process.env.prerender) {
+    return "";
+  }
+  return "http://localhost:1337";
 });
 
 const $headline = ref(null);
