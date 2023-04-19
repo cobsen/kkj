@@ -252,7 +252,7 @@ section {
   }
   .content {
     white-space: pre-wrap;
-    padding: 0 20px;
+    padding: 0 20px 0 0;
   }
 }
 body {
@@ -286,5 +286,20 @@ body {
 }
 .os-viewport {
   scroll-behavior: smooth !important;
+}
+button {
+  padding: 12px 20px;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  margin: 40px 0 0;
+  background: transparent;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+    background: #fff;
+    color: #fca58d;
+  }
 }
 </style>

@@ -30,7 +30,12 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+useHead({
+  title: "Konferenz KJ",
+  meta: [{ name: "description", content: "My amazing site." }],
+});
+</script>
 
 <style scoped lang="scss">
 #content {

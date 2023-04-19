@@ -1,5 +1,5 @@
 <template>
-  <section id="blog">
+  <section id="blog" class="divided">
     <div v-for="post in blogposts">
       <h3>{{ post.attributes.Titel }}</h3>
       <div class="content" v-html="post.attributes.Inhalt"></div>

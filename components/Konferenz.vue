@@ -1,6 +1,7 @@
 <template>
   <section id="konferenz">
     <div class="content" v-html="konferenz?.Inhalt"></div>
+    <Newsletter />
   </section>
 </template>
 
