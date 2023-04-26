@@ -1,9 +1,12 @@
 <template>
-  <section id="studie" class="divided">
+  <section class="divided">
     <div class="content" v-html="studie.Inhalt"></div>
-    <a :href="host + studie.PDF?.data?.attributes?.url"
-      ><button>Hier geht es zum PDF</button></a
+    <a
+      :href="host + studie.PDF?.data?.attributes?.url"
+      v-if="studie?.PDF?.data"
     >
+      <button>Hier geht es zum PDF</button>
+    </a>
   </section>
 </template>
 
@@ -28,7 +31,7 @@ const host = computed(() => {
   if (process.server && process.env.prerender) {
     return "";
   }
-  return "http://localhost:1337";
+  return "https://kkj-backend.perspective-daily.de";
 });
 
 const $headline = ref(null);

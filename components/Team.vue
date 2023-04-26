@@ -1,5 +1,5 @@
 <template>
-  <section id="team" class="divided">
+  <section class="divided">
     <div class="members">
       <div v-for="member in members" class="member">
         <nuxt-img

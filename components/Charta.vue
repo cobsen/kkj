@@ -1,7 +1,9 @@
 <template>
-  <section id="charta" class="divided">
+  <section class="divided">
     <div class="content" v-html="charta.Inhalt"></div>
-    <a :href="host + charta.PDF?.data?.attributes?.url"><button>PDF</button></a>
+    <a :href="host + charta.PDF?.data?.attributes?.url" v-if="charta?.PDF?.data"
+      ><button>PDF</button></a
+    >
   </section>
 </template>
 
@@ -24,7 +26,7 @@ const host = computed(() => {
   if (process.server && process.env.prerender) {
     return "";
   }
-  return "http://localhost:1337";
+  return "https://kkj-backend.perspective-daily.de";
 });
 </script>
 

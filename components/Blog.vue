@@ -1,5 +1,5 @@
 <template>
-  <section id="blog" class="divided">
+  <section class="divided">
     <BlogPost :post="post.attributes" v-for="post in blogposts" />
   </section>
 </template>

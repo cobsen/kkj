@@ -3,21 +3,21 @@
     <img src="../src/logo.svg" />
   </div>
   <div id="content">
-    <div>
+    <div id="konferenz">
       <div class="label">Konferenz</div>
     </div>
     <Konferenz />
-    <div><div class="label">Charta</div></div>
+    <div id="charta"><div class="label">Charta</div></div>
     <Charta />
-    <div>
+    <div id="studie">
       <div class="label">Studie</div>
     </div>
     <Studie />
-    <div>
+    <div id="blog">
       <div class="label">Blog &<br />Newsletter</div>
     </div>
     <Blog />
-    <div>
+    <div id="team">
       <div class="label">Team</div>
     </div>
     <Team />

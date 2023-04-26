@@ -1,5 +1,5 @@
 <template>
-  <section id="konferenz">
+  <section>
     <div class="content" v-html="konferenz?.Inhalt"></div>
     <Newsletter />
   </section>
