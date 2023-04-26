@@ -8,13 +8,15 @@ export default defineNuxtConfig({
   },
   strapi: {
     // Options
+    url: "https://kkj-backend.perspective-daily.de",
   },
   css: ["normalize.css/normalize.css"],
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@import "@/assets/_vars.scss";',
+          additionalData:
+            '@import "@/assets/_vars.scss"; @import "@/assets/_mixins.scss";',
         },
       },
     },
@@ -29,11 +31,11 @@ export default defineNuxtConfig({
   buildModules: ["@nuxt/image-edge"],
   image: {
     strapi: {
-      baseURL: "http://localhost:1337/",
+      baseURL: "https://kkj-backend.perspective-daily.de",
     },
 
     staticFilename: "[publicPath]/images/[name]-[hash][ext]",
-    domains: ["localhost", "localhost:1337"],
+    domains: ["https://kkj-backend.perspective-daily.de/"],
     dir: "static",
   },
 });

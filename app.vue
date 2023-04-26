@@ -3,7 +3,6 @@
     <Navigation />
     <OverlayScrollbarsComponent
       :options="{ scrollbars: { autoHide: 'move' } }"
-      :events="{ scroll: foo }"
       ref="$scrollbar"
     >
       <NuxtPage />
@@ -197,11 +196,6 @@ onMounted(() => {
 
 const $scrollbar = ref<OverlayScrollbarsComponentRef>();
 
-function foo(_instance: OverlayScrollbarsComponentRef, scroll: Event) {
-  if (body.value)
-    body.value.style.backgroundSize = 100 + scroll.target?.scrollTop / 50 + "%";
-}
-
 const search = useRouteHash();
 
 watch(search, (newHash, _) => {
@@ -223,6 +217,9 @@ watch(search, (newHash, _) => {
   height: 100vh;
   z-index: 1;
   position: relative;
+  @include breakpoint(mobile) {
+    padding: 24px 32px 0;
+  }
 }
 
 #bg-wrap {
@@ -258,25 +255,8 @@ section {
 body {
   font-family: "Space Grotesk", sans-serif;
   font-size: 20px;
+  line-height: 1.2;
   color: $main;
-  /*background: rgba(#cedef2, 1);
-  background: repeating-linear-gradient(
-    105deg,
-    rgba(#cedef2, 1),
-    rgba(#cedef2, 1),
-    rgba(#f8b993, 1),
-    rgba(#f8b993, 1),
-    rgba(#f7a9a0, 1),
-    rgba(#f7a9a0, 1),
-    rgba(#9ef2db, 1),
-    rgba(#9ef2db, 1),
-    rgba(#4a97fa, 1),
-    rgba(#4a97fa, 1),
-    rgba(#cedef2, 1),
-    rgba(#cedef2, 1) 200vh
-  );
-  background-position-x: 100vw;
-  background-position-y: 100vh;*/
 }
 .os-scrollbar {
   margin: 32px 0;

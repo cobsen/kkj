@@ -7,7 +7,7 @@
             resize: '200x200',
           }"
           :src="
-            'http://localhost:1337' +
+            'https://kkj-backend.perspective-daily.de' +
             member.attributes.Bild?.data?.attributes?.url
           "
         />
@@ -19,15 +19,18 @@
     </div>
 
     <div class="partners">
-      <div v-for="partner in partners">
+      <div v-for="partner in partners" class="partner">
         <nuxt-img
+          :modifiers="{
+            w: '200',
+          }"
           :src="
-            'http://localhost:1337' +
-            partner.attributes.Logo?.data?.attributes?.formats.thumbnail.url
+            'https://kkj-backend.perspective-daily.de' +
+            partner.attributes.Logo?.data?.attributes?.url
           "
         />
         <h4>{{ partner.attributes.Name }}</h4>
-        {{ partner.attributes.Beschreibung }}<br />
+        <div>{{ partner.attributes.Beschreibung }}</div>
       </div>
     </div>
   </section>
@@ -74,7 +77,7 @@ const partners = computed(() => {
 section {
 }
 .members {
-  margin-bottom: 48px;
+  margin: 48px 0;
   .member {
     display: grid;
     grid-template-columns: auto auto;
@@ -83,15 +86,12 @@ section {
       "image description"
       "name description";
     grid-gap: 16px 48px;
-    margin-bottom: 24px;
-    &:nth-child(2n) {
-      grid-template-areas:
-        "description image "
-        "description name ";
-    }
+    margin-bottom: 64px;
+    padding-bottom: 48px;
     img {
       grid-area: image;
       border-radius: 1337px;
+      justify-self: center;
     }
     h4 {
       grid-area: name;
@@ -101,11 +101,33 @@ section {
     & > div {
       grid-area: description;
     }
+    &:not(:last-child) {
+      border-bottom: 1px solid #fff;
+    }
+    @include breakpoint(mobile) {
+      grid-template-columns: auto;
+      grid-template-areas:
+        "image"
+        "name"
+        "description";
+      &:nth-child(2n) {
+        grid-template-areas:
+          "image"
+          "name"
+          "description";
+      }
+    }
   }
 }
+
 .partners {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 12px;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+  .partner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 </style>

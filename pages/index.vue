@@ -1,6 +1,6 @@
 <template>
-  <div class="foo">
-    <img class="stripes" src="../src/logo01-01.svg" />
+  <div class="logo">
+    <img src="../src/logo.svg" />
   </div>
   <div id="content">
     <div>
@@ -10,21 +10,15 @@
     <div><div class="label">Charta</div></div>
     <Charta />
     <div>
-      <div class="label">
-        <div>Studie</div>
-      </div>
+      <div class="label">Studie</div>
     </div>
     <Studie />
     <div>
-      <div class="label">
-        <div>Blog &<br />Newsletter</div>
-      </div>
+      <div class="label">Blog &<br />Newsletter</div>
     </div>
     <Blog />
     <div>
-      <div class="label">
-        <div>Team</div>
-      </div>
+      <div class="label">Team</div>
     </div>
     <Team />
   </div>
@@ -45,6 +39,9 @@ useHead({
   & > :first-child {
     position: relative;
   }
+  @include breakpoint(tablet) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .label {
@@ -55,25 +52,24 @@ useHead({
   top: 100px;
   height: 100px;
   font-weight: bold;
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  div {
-    position: absolute;
-    top: 0;
-    right: 0;
+  @include breakpoint(tablet) {
+    grid-template-columns: 1fr;
+    height: auto;
+    text-align: center;
   }
 }
 
-.foo {
+.logo {
   position: sticky;
   top: 0;
   left: 0;
   height: 0;
-}
-.stripes {
-  width: 400px;
+  img {
+    width: 400px;
+  }
+  @include breakpoint(tablet) {
+    position: relative;
+    display: none;
+  }
 }
 </style>

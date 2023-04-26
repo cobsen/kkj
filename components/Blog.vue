@@ -1,15 +1,6 @@
 <template>
   <section id="blog" class="divided">
-    <div v-for="post in blogposts">
-      <h3>{{ post.attributes.Titel }}</h3>
-      <div class="content" v-html="post.attributes.Inhalt"></div>
-
-      <nuxt-img
-        format="avif"
-        :src="'http://localhost:1337' + media.attributes?.formats.large.url"
-        v-for="media in post.attributes.Media?.data"
-      />
-    </div>
+    <BlogPost :post="post.attributes" v-for="post in blogposts" />
   </section>
 </template>
 
@@ -32,8 +23,5 @@ const blogposts = computed(() => {
 
 <style lang="scss" scoped>
 section {
-  img {
-    max-width: 100%;
-  }
 }
 </style>

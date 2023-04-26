@@ -25,5 +25,11 @@ section {
   &:before {
     display: none;
   }
+  @include breakpoint(tablet) {
+    column-count: 2;
+  }
+  @include breakpoint(mobile) {
+    column-count: 1;
+  }
 }
 </style>

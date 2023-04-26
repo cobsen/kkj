@@ -43,7 +43,7 @@
               form="sib-form"
               type="submit"
             >
-              ANMELDEN
+              Anmelden
             </button>
             <input
               type="hidden"
@@ -100,6 +100,7 @@ form {
     transition: 0.2s;
     width: 100%;
     box-sizing: border-box;
+    font-size: 17px;
     &::placeholder {
       color: rgba(#fff, 0.4) !important;
     }
