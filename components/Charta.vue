@@ -1,9 +1,12 @@
 <template>
   <section class="divided">
     <div class="content" v-html="charta.Inhalt"></div>
-    <a :href="host + charta.PDF?.data?.attributes?.url" v-if="charta?.PDF?.data"
-      ><button>PDF</button></a
-    >
+
+    <PdfButton
+      :url="charta.PDF?.data?.attributes?.url"
+      label="hier geht es zum PDF"
+      v-if="charta?.PDF?.data"
+    />
   </section>
 </template>
 

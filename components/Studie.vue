@@ -1,12 +1,12 @@
 <template>
   <section class="divided">
     <div class="content" v-html="studie.Inhalt"></div>
-    <a
-      :href="host + studie.PDF?.data?.attributes?.url"
+
+    <PdfButton
+      :url="studie.PDF?.data?.attributes?.url"
+      label="hier geht es zum PDF"
       v-if="studie?.PDF?.data"
-    >
-      <button>Hier geht es zum PDF</button>
-    </a>
+    />
   </section>
 </template>
 
