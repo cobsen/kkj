@@ -10,6 +10,7 @@
             'https://kkj-backend.perspective-daily.de' +
             member.attributes.Bild?.data?.attributes?.url
           "
+          alt=""
         />
         <h4>{{ member.attributes.Name }}</h4>
         <div>
@@ -28,6 +29,7 @@
             'https://kkj-backend.perspective-daily.de' +
             partner.attributes.Logo?.data?.attributes?.url
           "
+          alt=""
         />
         <h4>{{ partner.attributes.Name }}</h4>
         <div>{{ partner.attributes.Beschreibung }}</div>

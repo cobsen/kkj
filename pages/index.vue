@@ -1,6 +1,6 @@
 <template>
   <div class="logo">
-    <img src="../src/logo.svg" />
+    <img src="../src/logo.svg" alt="" />
   </div>
   <div id="content">
     <div id="konferenz">

@@ -7,10 +7,11 @@
       format="avif"
       :src="'https://kkj-backend.perspective-daily.de' + media.attributes?.url"
       v-for="media in post.Media?.data"
+      alt=""
     />
     <div ref="$content" class="content" v-html="props.post.Inhalt"></div>
     <div class="showmore" @click="showFullPost()" v-if="!showAll">
-      <img src="../src/blog.svg" />
+      <img src="../src/blog.svg" alt="rest des blogposts anzeigen" />
     </div>
   </div>
 </template>

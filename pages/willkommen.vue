@@ -1,7 +1,7 @@
 <template>
   <section>
     <div>
-      <img src="../src/logo.svg" />
+      <img src="../src/logo.svg" alt="" />
       <div v-html="willkommen"></div>
     </div>
   </section>
