@@ -15,11 +15,6 @@ const props = defineProps({
   label: { type: String, required: true },
 });
 
-console.log("dada", props.url);
-
-appendHeader(useRequestEvent(), "x-nitro-prerender", props.url);
-//"https://kkj-backend.perspective-daily.de/uploads/Praese_Site_2023_d44971327a.pdf" +
-
 if (process.server && process.env.prerender) {
   console.log("trying to download a pdf", props.url);
   const url = "https://kkj-backend.perspective-daily.de" + props.url;

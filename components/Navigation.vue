@@ -28,8 +28,8 @@
         <NuxtLink :to="{ name: 'datenschutz' }">Datenschutz</NuxtLink>
       </li>
       <span class="nav-toggle" @click="showNavi = !showNavi">
-        <span v-if="showNavi">X</span>
-        <span v-else>Z</span>
+        <span v-if="showNavi"><img src="../src/navi-close.svg" /></span>
+        <span v-else><img src="../src/navi.svg" /></span>
       </span>
     </ul>
   </nav>

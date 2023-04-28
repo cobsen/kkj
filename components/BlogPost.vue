@@ -9,7 +9,9 @@
       v-for="media in post.Media?.data"
     />
     <div ref="$content" class="content" v-html="props.post.Inhalt"></div>
-    <button @click="showFullPost()" v-if="!showAll">foo</button>
+    <div class="showmore" @click="showFullPost()" v-if="!showAll">
+      <img src="../src/blog.svg" />
+    </div>
   </div>
 </template>
 
@@ -56,5 +58,13 @@ h3 {
 .date {
   font-size: 16px;
   margin-bottom: 24px;
+}
+.showmore {
+  img {
+    max-width: 80%;
+    display: block;
+    margin: 32px auto 0;
+    cursor: pointer;
+  }
 }
 </style>
