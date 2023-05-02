@@ -9,19 +9,68 @@
           <form
             id="sib-form"
             method="POST"
-            action="https://3a9f4d41.sibforms.com/serve/MUIEAAAA39jjSlTavM0Xb0k8aG2VJU3JoQ27yN_871e880F6AmfMXtWVQ2bZDgAYk1r5vuYf2nUue2-DIH1rhx0fRhq-I2fkAdtUWcU6cUkbj_riifGHb_w58YMi5RhgrpFBkv1By2PE2wKBqs6LmUFLogHydTcmFv4Tkaukp9Y7JVQ90kZioaPxAfysWe9mc2AxGxNhmtJdtXbP"
+            action="https://3a9f4d41.sibforms.com/serve/MUIEABILml20CIoyT1X6peOMMDKSUhnMRMey9uQENiIWgD5KC3gr6OzT294ztWoQgmofNNXLjT7_qeCxPPUNk-bNss-4KgOiE33P6E3X4ALeYcUZno0tZoggz_586xAYVl7xSJU0LX5E-sWhsHp_ojPXmGOek7oLZmvhjovdA1a3e35oXm2AMVZc0bH8PKp1Mki0w2AnrAB3C4Dt"
           >
-            <input
-              class="input"
-              type="text"
-              id="EMAIL"
-              name="EMAIL"
-              autocomplete="off"
-              placeholder="E-Mail"
-              data-required="true"
-              required
-            />
-            <div>
+            <div class="form-line">
+              <input
+                class="input"
+                maxlength="200"
+                type="text"
+                id="VORNAME"
+                name="VORNAME"
+                autocomplete="off"
+                placeholder="Vorname"
+                data-required="true"
+                required
+              />
+              <input
+                class="input"
+                maxlength="200"
+                type="text"
+                id="NACHNAME"
+                name="NACHNAME"
+                autocomplete="off"
+                placeholder="Nachname"
+                data-required="true"
+                required
+              />
+            </div>
+            <div class="form-line">
+              <input
+                class="input"
+                type="text"
+                id="EMAIL"
+                name="EMAIL"
+                autocomplete="off"
+                placeholder="E-Mail"
+                data-required="true"
+                required
+              />
+            </div>
+            <div class="form-line">
+              <input
+                type="tel"
+                class="input"
+                id="TELEFON"
+                name="TELEFON"
+                autocomplete="off"
+                placeholder="TELEFON"
+                data-required="true"
+                required
+              />
+            </div>
+            <div class="form-line">
+              <input
+                class="input"
+                maxlength="200"
+                type="text"
+                id="MEDIUM"
+                name="MEDIUM"
+                autocomplete="off"
+                placeholder="Dein Medium"
+              />
+            </div>
+            <div class="form-line">
               <label>
                 <input
                   type="checkbox"
@@ -88,11 +137,18 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  input[type="text"] {
+  .form-line {
+    margin: 40px auto 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  input[type="text"],
+  input[type="tel"] {
     padding: 12px 20px;
     border: 3px solid #fff;
     border-radius: 10px;
-    margin: 40px auto 0;
     background: transparent;
     color: #fff;
     font-weight: bold;
@@ -113,6 +169,10 @@ form {
       &::placeholder {
         color: #fca58d !important;
       }
+    }
+    &#VORNAME,
+    &#NACHNAME {
+      width: calc(50% - 20px);
     }
   }
 
