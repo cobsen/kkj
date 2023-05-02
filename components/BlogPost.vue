@@ -22,6 +22,7 @@ import { snip, unsnip } from "js-snip";
 
 const props = defineProps({
   post: { type: Object as PropType<Blogeintrag>, required: true },
+  single: { type: Boolean, default: false },
 });
 
 const showAll = ref(false);
@@ -29,9 +30,17 @@ const showAll = ref(false);
 const $content = ref<HTMLElement | null>(null);
 
 onMounted(() => {
-  snip($content.value, { lines: 12, midWord: false }, (newState, oldState) => {
-    if (!newState.hasEllipsis) showFullPost();
-  });
+  if (!props.single) {
+    snip(
+      $content.value,
+      { lines: 12, midWord: false },
+      (newState, oldState) => {
+        if (!newState.hasEllipsis) showFullPost();
+      }
+    );
+  } else {
+    showAll.value = true;
+  }
 });
 
 function showFullPost() {

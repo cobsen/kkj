@@ -1,5 +1,5 @@
 <template>
-  <section class="divided">
+  <section>
     <BlogPost :post="post.attributes" v-for="post in blogposts" />
   </section>
 </template>
@@ -17,11 +17,20 @@ const response = await useAsyncData("blogeintrags", () =>
 );
 
 const blogposts = computed(() => {
-  return response?.data.value?.data.slice(0, 5) ?? [];
+  return response?.data.value?.data ?? [];
 });
 </script>
 
 <style lang="scss" scoped>
 section {
+  div {
+    width: 80vw;
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+    img {
+      margin-bottom: 48px;
+    }
+  }
 }
 </style>
