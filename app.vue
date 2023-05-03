@@ -174,7 +174,9 @@
 
 <script setup lang="ts">
 import Navigation from "./components/Navigation.vue";
-import "@fontsource/space-grotesk";
+import "@fontsource/space-grotesk/400.css";
+import "@fontsource/space-grotesk/600.css";
+import "@fontsource/space-grotesk/700.css";
 import "overlayscrollbars/overlayscrollbars.css";
 import { OverlayScrollbarsComponent } from "overlayscrollbars-vue/overlayscrollbars-vue.es.js";
 import type { OverlayScrollbarsComponentRef } from "overlayscrollbars-vue";
@@ -257,6 +259,7 @@ body {
   font-size: 20px;
   line-height: 1.2;
   color: $main;
+  -webkit-font-smoothing: antialiased;
 }
 .os-scrollbar {
   margin: 32px 0;

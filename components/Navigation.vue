@@ -65,7 +65,7 @@ ul {
     a:hover {
       color: $main;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
     }
     .router-link-active {
       font-weight: bold;
