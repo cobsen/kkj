@@ -20,7 +20,7 @@ const datenschutz = computed(() => {
 
 <style lang="scss" scoped>
 section {
-  column-count: 3;
+  column-count: 2;
   column-gap: 24px;
   &:before {
     display: none;

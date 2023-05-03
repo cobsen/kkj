@@ -43,7 +43,7 @@
 const showNavi = ref(false);
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 h1 {
   margin: 0;
 }
