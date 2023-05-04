@@ -2,13 +2,14 @@
   <section>
     <div>
       <img src="../src/logo.svg" alt="" />
-      <div v-html="willkommen"></div>
+      <VueMarkdown :source="willkommen" />
     </div>
   </section>
 </template>
 
 <script lang="ts" setup>
 import { Willkommen } from "~/assets/types";
+import VueMarkdown from 'vue-markdown-render'
 
 const { findOne } = useStrapi();
 

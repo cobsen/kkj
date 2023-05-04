@@ -583,6 +583,7 @@ export type Blogeintrag = {
   Titel?: Maybe<Scalars["String"]>;
   Media?: Maybe<UploadFileRelationResponseCollection>;
   Inhalt?: Maybe<Scalars["String"]>;
+  datum?: Maybe<Scalars["DateTime"]>;
   createdAt?: Maybe<Scalars["DateTime"]>;
   updatedAt?: Maybe<Scalars["DateTime"]>;
   publishedAt?: Maybe<Scalars["DateTime"]>;

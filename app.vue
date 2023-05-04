@@ -250,7 +250,7 @@ section {
     background-clip: content-box;
   }
   .content {
-    white-space: pre-wrap;
+    //white-space: pre-wrap;
     padding: 0 20px 0 0;
   }
 }

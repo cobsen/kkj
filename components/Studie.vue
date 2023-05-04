@@ -1,11 +1,11 @@
 <template>
   <section class="divided">
-    <div class="content" v-html="studie.Inhalt"></div>
+    <VueMarkdown class="content" :source="studie?.Inhalt" />
 
     <PdfButton
       :url="studie.PDF?.data?.attributes?.url"
       label="hier geht es zum PDF"
-      v-if="studie?.PDF?.data"
+      v-if="studie?.PDF?.data?.attributes?.url"
     />
   </section>
 </template>
@@ -14,6 +14,7 @@
 import { ref } from "vue";
 import { useIntersectionObserver } from "@vueuse/core";
 import { Studie } from "~/assets/types";
+import VueMarkdown from 'vue-markdown-render'
 
 const { findOne } = useStrapi();
 

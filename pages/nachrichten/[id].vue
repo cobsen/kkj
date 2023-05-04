@@ -1,6 +1,6 @@
 <template>
   <section>
-    <BlogPost :post="post.attributes" :single="true" />
+    <BlogPost :post="post.attributes" :id="route.params.id" :single="true" />
   </section>
 </template>
 
