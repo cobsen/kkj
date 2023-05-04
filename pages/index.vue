@@ -34,7 +34,7 @@ useHead({
 <style scoped lang="scss">
 #content {
   display: grid;
-  grid-template-columns: 400px 1fr;
+  grid-template-columns: 480px 1fr;
   grid-gap: 24px;
   & > :first-child {
     position: relative;
@@ -49,7 +49,7 @@ useHead({
   line-height: 1;
   text-align: right;
   position: sticky;
-  top: 100px;
+  top: 135px;
   height: 100px;
   font-weight: bold;
   @include breakpoint(tablet) {
@@ -65,7 +65,7 @@ useHead({
   left: 0;
   height: 0;
   img {
-    width: 400px;
+    width: 480px;
   }
   @include breakpoint(tablet) {
     position: relative;

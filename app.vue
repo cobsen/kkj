@@ -281,8 +281,8 @@ button {
   cursor: pointer;
   transition: 0.2s;
   &:hover {
-    background: #fff;
-    color: #fca58d;
+    background: rgba(#fff, 0.4); //#fff;
+    color: #fff; //#fca58d;
   }
 }
 </style>

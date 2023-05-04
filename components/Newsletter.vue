@@ -54,7 +54,7 @@
                 id="TELEFON"
                 name="TELEFON"
                 autocomplete="off"
-                placeholder="TELEFON"
+                placeholder="Telefonnummer"
                 data-required="true"
                 required
               />
@@ -167,7 +167,7 @@ form {
       background: rgba(#fff, 0.4);
 
       &::placeholder {
-        color: #fca58d !important;
+        color: #fff !important; //#fca58d !important;
       }
     }
     &#VORNAME,
@@ -212,9 +212,9 @@ form {
     }
 
     input:checked ~ .checkbox {
-      background: #fff;
+      background: rgba(#fff, 0.4); //#fff;
       &:after {
-        color: #fca58d;
+        color: #fff; //#fca58d;
       }
     }
   }
