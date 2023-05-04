@@ -841,6 +841,7 @@ export type TeammitgliedInput = {
 export type Teammitglied = {
   __typename?: "Teammitglied";
   Name?: Maybe<Scalars["String"]>;
+  Org?: Maybe<Scalars["String"]>;
   Beschreibung?: Maybe<Scalars["String"]>;
   Bild?: Maybe<UploadFileEntityResponse>;
   createdAt?: Maybe<Scalars["DateTime"]>;

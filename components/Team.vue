@@ -4,7 +4,7 @@
       <div v-for="member in members" class="member">
         <nuxt-img
           :modifiers="{
-            resize: '200x200',
+            resize: '160x160',
           }"
           :src="
             'https://kkj-backend.perspective-daily.de' +
@@ -12,7 +12,10 @@
           "
           alt=""
         />
-        <h4>{{ member.attributes.Name }}</h4>
+        <div class="name">
+          {{ member.attributes.Name }} <br />
+          <span>{{ member.attributes.Org }}</span>
+        </div>
         <div>
           {{ member.attributes.Beschreibung }}
         </div>
@@ -95,10 +98,14 @@ section {
       border-radius: 1337px;
       justify-self: center;
     }
-    h4 {
+    .name {
       grid-area: name;
       margin: 0;
       text-align: center;
+      font-weight: 600;
+      span {
+        font-weight: normal;
+      }
     }
     & > div {
       grid-area: description;
@@ -106,7 +113,9 @@ section {
     &:not(:last-child) {
       border-bottom: 1px solid #fff;
     }
+    margin-right: 20px;
     @include breakpoint(mobile) {
+      margin-right: 0;
       grid-template-columns: auto;
       grid-template-areas:
         "image"
