@@ -1,6 +1,10 @@
 <template>
   <div class="blogpost">
-    <h3>{{ post.Titel }}</h3>
+
+    <NuxtLink :to="`/nachrichten/${id}`"
+          >
+    <h3>{{ post.Titel }}</h3></NuxtLink
+        >
     <div class="date">{{ post.datum }}</div>
 
     <nuxt-img
@@ -23,6 +27,7 @@ import { snip, unsnip } from "js-snip";
 const props = defineProps({
   post: { type: Object as PropType<Blogeintrag>, required: true },
   single: { type: Boolean, default: false },
+  id: { type: Number, required: true },
 });
 
 const showAll = ref(false);
@@ -62,8 +67,9 @@ img {
   display: block;
   margin: 0 auto 12px;
 }
+a {color:#fff;}
 h3 {
-  margin-bottom: 8px;
+  margin-bottom: 8px;color:#fff;text-decoration: none;
 }
 .date {
   font-size: 16px;

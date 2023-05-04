@@ -1,6 +1,6 @@
 <template>
   <section>
-    <BlogPost :post="post.attributes" v-for="post in blogposts" />
+    <BlogPost :post="post.attributes" :id="post.id" v-for="post in blogposts" />
   </section>
 </template>
 
