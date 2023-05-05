@@ -4,7 +4,7 @@
     <NuxtLink :to="`/nachrichten/${id}`">
       <h3>{{ post.Titel }}</h3>
     </NuxtLink>
-    <div class="date">{{ post.datum }}</div>
+    <div class="date">{{ date }}</div>
 
     <nuxt-img format="avif" :src="'https://kkj-backend.perspective-daily.de' + media.attributes?.url"
       v-for="media in post.Media?.data" alt="" />
@@ -47,6 +47,25 @@ function showFullPost() {
 const displayContent = computed(() => {
   if (props.single || showAll.value) return props.post.Inhalt?.replace('<hr>', '')
   return props.post.Inhalt?.split('<hr>')[0]
+})
+
+const date = computed(() => {
+  const months = [
+    "Januar",
+    "Februar",
+    "März",
+    "April",
+    "Mai",
+    "Juni",
+    "Juli",
+    "August",
+    "September",
+    "Oktober",
+    "November",
+    "Dezember"
+  ];
+  const date = new Date(props.post.datum);
+  return `${date.getDate()}. ${months[date.getMonth()]} ${date.getFullYear()}`
 })
 </script>
 
