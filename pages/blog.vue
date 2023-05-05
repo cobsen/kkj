@@ -12,7 +12,7 @@ const { find } = useStrapi();
 
 const response = await useAsyncData("blogeintrags", () =>
   find<Blogeintrag>("blogeintrags", {
-    populate: "Media",
+    populate: ["Media", "InlineBilder"],
   })
 );
 
@@ -28,6 +28,7 @@ section {
     max-width: 860px;
     margin: 0 auto;
     text-align: center;
+
     img {
       margin-bottom: 48px;
     }

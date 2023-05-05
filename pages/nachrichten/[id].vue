@@ -13,7 +13,7 @@ const { findOne } = useStrapi();
 
 const response = await useAsyncData("blogeintrags", () =>
   findOne<Blogeintrag>("blogeintrags", route.params.id, {
-    populate: "Media",
+    populate: ["Media", "InlineBilder"],
   })
 );
 
@@ -29,6 +29,7 @@ section {
     max-width: 860px;
     margin: 0 auto;
     text-align: center;
+
     img {
       margin-bottom: 48px;
     }
