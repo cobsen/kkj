@@ -2,16 +2,11 @@
   <section class="divided">
     <div class="members">
       <div v-for="member in members" class="member">
-        <nuxt-img
-          :modifiers="{
-            resize: '160x160',
-          }"
-          :src="
-            'https://kkj-backend.perspective-daily.de' +
-            member.attributes.Bild?.data?.attributes?.url
-          "
-          alt=""
-        />
+        <nuxt-img :modifiers="{
+          resize: '160x160',
+        }" :src="'https://kkj-backend.perspective-daily.de' +
+  member.attributes.Bild?.data?.attributes?.url
+  " alt="" width="160" height="160" />
         <div class="name">
           {{ member.attributes.Name }} <br />
           <span>{{ member.attributes.Org }}</span>
@@ -24,16 +19,11 @@
 
     <div class="partners">
       <div v-for="partner in partners" class="partner">
-        <nuxt-img
-          :modifiers="{
-            w: '200',
-          }"
-          :src="
-            'https://kkj-backend.perspective-daily.de' +
-            partner.attributes.Logo?.data?.attributes?.url
-          "
-          alt=""
-        />
+        <nuxt-img :modifiers="{
+          w: '200'
+        }" :src="'https://kkj-backend.perspective-daily.de' +
+  partner.attributes.Logo?.data?.attributes?.url
+  " alt="" width="200" />
         <h4>{{ partner.attributes.Name }}</h4>
         <div>{{ partner.attributes.Beschreibung }}</div>
       </div>
@@ -79,10 +69,11 @@ const partners = computed(() => {
 </script>
 
 <style lang="scss" scoped>
-section {
-}
+section {}
+
 .members {
   margin: 48px 0;
+
   .member {
     display: grid;
     grid-template-columns: auto auto;
@@ -93,27 +84,34 @@ section {
     grid-gap: 16px 48px;
     margin-bottom: 64px;
     padding-bottom: 48px;
+
     img {
       grid-area: image;
       border-radius: 1337px;
       justify-self: center;
     }
+
     .name {
       grid-area: name;
       margin: 0;
       text-align: center;
       font-weight: 600;
+
       span {
         font-weight: normal;
       }
     }
-    & > div {
+
+    &>div {
       grid-area: description;
     }
+
     &:not(:last-child) {
       border-bottom: 1px solid #fff;
     }
+
     margin-right: 20px;
+
     @include breakpoint(mobile) {
       margin-right: 0;
       grid-template-columns: auto;
@@ -121,6 +119,7 @@ section {
         "image"
         "name"
         "description";
+
       &:nth-child(2n) {
         grid-template-areas:
           "image"
@@ -135,6 +134,7 @@ section {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 16px;
+
   .partner {
     display: flex;
     flex-direction: column;
