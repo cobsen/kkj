@@ -133,6 +133,18 @@ section {
   .content {
     //white-space: pre-wrap;
     padding: 0 20px 0 0;
+
+    a {
+      color: #fff;
+      font-weight: 600;
+
+      &:after {
+        display: inline-block;
+        content: "↗";
+        font-weight: 400;
+        text-decoration: underline;
+      }
+    }
   }
 }
 
