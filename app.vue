@@ -5,7 +5,7 @@
       <NuxtPage />
     </OverlayScrollbarsComponent>
   </div>
-  <div id="bg-wrap" style="background:#306fdd">
+  <div id="bg-wrap" style="background:#5185cc">
     <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
       <defs>
         <radialGradient id="Gradient1" cx="50%" cy="50%" fx="0.441602%" fy="50%" r=".5">
@@ -170,4 +170,5 @@ button {
     background: rgba(#fff, 0.4); //#fff;
     color: #fff; //#fca58d;
   }
-}</style>
+}
+</style>
