@@ -1,18 +1,14 @@
 <template>
   <section class="divided">
-    <VueMarkdown class="content" :source="charta?.Inhalt" />
+    <div class="content" v-html="charta?.Inhalt" />
 
-    <PdfButton
-      :url="charta.PDF?.data?.attributes?.url"
-      label="hier geht es zum PDF"
-      v-if="charta?.PDF?.data?.attributes?.url"
-    />
+    <PdfButton :url="charta.PDF?.data?.attributes?.url" label="hier geht es zum PDF"
+      v-if="charta?.PDF?.data?.attributes?.url" />
   </section>
 </template>
 
 <script lang="ts" setup>
 import { Charta } from "~/assets/types";
-import VueMarkdown from 'vue-markdown-render'
 
 const { findOne } = useStrapi();
 
@@ -35,6 +31,5 @@ const host = computed(() => {
 </script>
 
 <style lang="scss" scoped>
-section {
-}
+section {}
 </style>

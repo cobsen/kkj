@@ -1,13 +1,14 @@
 <template>
   <section>
-    <VueMarkdown class="content" :source="konferenz?.Inhalt" />
+    <img src="~/public/kkj.svg" alt="" />
+    <div class="content" v-html="konferenz?.Inhalt" />
+    <div class="content" v-html="konferenz?.Programm" />
     <Newsletter />
   </section>
 </template>
 
 <script lang="ts" setup>
 import { Konferenz } from "~/assets/types";
-import VueMarkdown from 'vue-markdown-render'
 
 const { findOne } = useStrapi();
 
@@ -22,5 +23,11 @@ const konferenz = computed(() => {
 
 <style lang="scss" scoped>
 section {
+  .content {
+
+    p:first-of-type {
+      color: red;
+    }
+  }
 }
 </style>

@@ -20,15 +20,14 @@ const impressum = computed(() => {
 
 <style lang="scss" scoped>
 section {
-  column-count: 3;
+  column-count: 2;
   column-gap: 24px;
+
   &:before {
     display: none;
   }
+
   @include breakpoint(tablet) {
-    column-count: 2;
-  }
-  @include breakpoint(mobile) {
     column-count: 1;
   }
 }
