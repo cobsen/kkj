@@ -25,10 +25,6 @@
       <div class="label">Blog</div>
     </div>
     <Blog />
-    <div id="team">
-      <div class="label">Team</div>
-    </div>
-    <Team />
   </div>
 </template>
 

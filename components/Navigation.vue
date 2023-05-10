@@ -20,7 +20,7 @@
         <NuxtLink :to="{ name: 'index', hash: '#blog' }">Blog</NuxtLink>
       </li>
       <li>
-        <NuxtLink :to="{ name: 'index', hash: '#team' }">Team & Partner</NuxtLink>
+        <NuxtLink :to="{ name: 'team' }">Team & Partner</NuxtLink>
       </li>
       <li>
         <NuxtLink :to="{ name: 'impressum' }">Impressum & Kontakt</NuxtLink>
