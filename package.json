@@ -32,7 +32,6 @@
     "js-snip": "^1.2.0",
     "normalize.css": "^8.0.1",
     "overlayscrollbars": "^2.1.1",
-    "overlayscrollbars-vue": "^0.5.1",
-    "vue-snip": "^2.0.1"
+    "overlayscrollbars-vue": "^0.5.1"
   }
 }

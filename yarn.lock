@@ -6999,13 +6999,6 @@ vue-router@^4.1.6:
   dependencies:
     "@vue/devtools-api" "^6.4.5"
 
-vue-snip@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/vue-snip/-/vue-snip-2.0.1.tgz#cc7399edb929c8f00986fa86329bb5d47617861d"
-  integrity sha512-d4cH1Hq5behslipCQ3Bj0LRCiWhqS5pZsmx+98Xm+ZIxp/VwIbX4KE+/2v8Xc4c/GYQwGo7qvL0j8MOhE5Md7A==
-  dependencies:
-    js-snip "^1.2.0"
-
 vue@^3.2.45, vue@^3.2.47:
   version "3.2.47"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.47.tgz#3eb736cbc606fc87038dbba6a154707c8a34cff0"
