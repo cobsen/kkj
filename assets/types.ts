@@ -623,6 +623,7 @@ export type Charta = {
   __typename?: "Charta";
   PDF?: Maybe<UploadFileEntityResponse>;
   Inhalt?: Maybe<Scalars["String"]>;
+  Button?: InputMaybe<Scalars["String"]>;
   createdAt?: Maybe<Scalars["DateTime"]>;
   updatedAt?: Maybe<Scalars["DateTime"]>;
   publishedAt?: Maybe<Scalars["DateTime"]>;
@@ -706,7 +707,7 @@ export type Konferenz = {
   __typename?: "Konferenz";
   Titel?: Maybe<Scalars["String"]>;
   Inhalt?: Maybe<Scalars["String"]>;
-  Programm?: Maybe<Scalars["String"]>;
+  InlineBilder?: Maybe<UploadFileRelationResponseCollection>;
   createdAt?: Maybe<Scalars["DateTime"]>;
   updatedAt?: Maybe<Scalars["DateTime"]>;
   publishedAt?: Maybe<Scalars["DateTime"]>;
@@ -779,6 +780,7 @@ export type Programm = {
   __typename?: "Programm";
   PDF?: Maybe<UploadFileEntityResponse>;
   Inhalt?: Maybe<Scalars["String"]>;
+  Button?: InputMaybe<Scalars["String"]>;
   createdAt?: Maybe<Scalars["DateTime"]>;
   updatedAt?: Maybe<Scalars["DateTime"]>;
   publishedAt?: Maybe<Scalars["DateTime"]>;
@@ -805,6 +807,7 @@ export type Studie = {
   __typename?: "Studie";
   PDF?: Maybe<UploadFileEntityResponse>;
   Inhalt?: Maybe<Scalars["String"]>;
+  Button?: InputMaybe<Scalars["String"]>;
   createdAt?: Maybe<Scalars["DateTime"]>;
   updatedAt?: Maybe<Scalars["DateTime"]>;
   publishedAt?: Maybe<Scalars["DateTime"]>;

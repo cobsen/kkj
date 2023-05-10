@@ -4,17 +4,25 @@
   </div>
   <div id="content">
     <div id="konferenz">
-      <div class="label">Konferenz</div>
+      <div class="label">Konferenz<br />& Anmeldung</div>
     </div>
     <Konferenz />
-    <div id="charta"><div class="label">Charta</div></div>
+    <div id="programm">
+      <div class="label">Programm</div>
+    </div>
+    <Programm />
+    <!--
+    <div id="charta">
+      <div class="label">Charta</div>
+    </div>
     <Charta />
     <div id="studie">
       <div class="label">Studie</div>
     </div>
-    <Studie />
+    <Studie /> 
+    -->
     <div id="blog">
-      <div class="label">Blog &<br />Newsletter</div>
+      <div class="label">Blog</div>
     </div>
     <Blog />
     <div id="team">
@@ -27,7 +35,7 @@
 <script setup lang="ts">
 useHead({
   title: "Konferenz KJ",
-  meta: [{ name: "description", content: "My amazing site." }],
+  meta: [{ name: "description", content: "Am 6. und 7. Juli findet im taz Haus in Berlin die Konferenz für Konstruktiven Journalismus 2023 statt. Jetzt anmelden!" }],
 });
 </script>
 
@@ -36,9 +44,11 @@ useHead({
   display: grid;
   grid-template-columns: 480px 1fr;
   grid-gap: 24px;
-  & > :first-child {
+
+  &> :first-child {
     position: relative;
   }
+
   @include breakpoint(tablet) {
     grid-template-columns: 1fr;
   }
@@ -52,6 +62,7 @@ useHead({
   top: 135px;
   height: 100px;
   font-weight: bold;
+
   @include breakpoint(tablet) {
     grid-template-columns: 1fr;
     height: auto;
@@ -64,9 +75,11 @@ useHead({
   top: 0;
   left: 0;
   height: 0;
+
   img {
     width: 480px;
   }
+
   @include breakpoint(tablet) {
     position: relative;
     display: none;
