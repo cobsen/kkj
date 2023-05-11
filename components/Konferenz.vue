@@ -66,5 +66,9 @@ section {
     width: 0;
     overflow: hidden;
   }
+
+  img {
+    border-radius: 0;
+  }
 }
 </style>

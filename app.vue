@@ -183,4 +183,23 @@ button {
     color: #fff; //#fca58d;
   }
 }
+
+img {
+  border-radius: 8px;
+}
+
+section {
+
+  a {
+    color: #fff;
+    font-weight: 600;
+
+    &:after {
+      display: inline-block;
+      content: "↗";
+      font-weight: 400;
+      text-decoration: underline;
+    }
+  }
+}
 </style>

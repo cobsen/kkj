@@ -30,5 +30,6 @@ section {
   @include breakpoint(tablet) {
     column-count: 1;
   }
+
 }
 </style>
