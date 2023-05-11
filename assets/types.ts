@@ -685,6 +685,14 @@ export type Willkommen = {
   publishedAt?: Maybe<Scalars["DateTime"]>;
 };
 
+export type Angemeldet = {
+  __typename?: "Angemeldet";
+  Inhalt?: Maybe<Scalars["String"]>;
+  createdAt?: Maybe<Scalars["DateTime"]>;
+  updatedAt?: Maybe<Scalars["DateTime"]>;
+  publishedAt?: Maybe<Scalars["DateTime"]>;
+};
+
 export type ImpressumEntity = {
   __typename?: "ImpressumEntity";
   id?: Maybe<Scalars["ID"]>;
