@@ -1,7 +1,7 @@
 <template>
   <div class="blogpost">
 
-    <NuxtLink :to="`/nachrichten/${id}`">
+    <NuxtLink :to="`/nachrichten/${id}`" class="headline">
       <h3>{{ post.Titel }}</h3>
     </NuxtLink>
     <div class="date">{{ date }}</div>
@@ -113,5 +113,9 @@ h3 {
   height: 0;
   width: 0;
   overflow: hidden;
+}
+
+a.headline:after {
+  display: none;
 }
 </style>

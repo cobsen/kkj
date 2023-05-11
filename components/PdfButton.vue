@@ -37,3 +37,9 @@ if (process.server && process.env.prerender) {
   });
 }
 </script>
+
+<style lang="scss" scoped>
+a:after {
+  display: none !important;
+}
+</style>
