@@ -1,5 +1,5 @@
 <template>
-  <div class="blogpost">
+  <div class="blogpost" v-if="post">
 
     <NuxtLink :to="`/nachrichten/${id}`" class="headline">
       <h3>{{ post.Titel }}</h3>
