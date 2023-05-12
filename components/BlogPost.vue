@@ -7,7 +7,7 @@
     <div class="date">{{ date }}</div>
 
     <nuxt-img format="avif" :src="'https://kkj-backend.perspective-daily.de' + media.attributes?.url"
-      v-for="media in post.Media?.data" alt="" />
+      v-for="media in post?.Media?.data" alt="" />
 
     <div ref="$content" class="content" v-html="displayContent" />
 
@@ -17,7 +17,7 @@
 
     <div class="image-dummy">
       <nuxt-img format="avif" :src="'https://kkj-backend.perspective-daily.de' + media.attributes?.url"
-        v-for="media in post.InlineBilder?.data" alt="" />
+        v-for="media in post?.InlineBilder?.data" alt="" />
     </div>
 
   </div>
