@@ -153,6 +153,10 @@ h1 {
         &:not(:last-child) {
             border-bottom: 1px solid #fff;
         }
+
+        img {
+            border-radius: 0;
+        }
     }
 }
 </style>
