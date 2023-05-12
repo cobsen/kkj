@@ -45,6 +45,7 @@ function showFullPost() {
 }
 
 const displayContent = computed(() => {
+  if (!props.post) return ''
   if (props.single || showAll.value) return props.post.Inhalt?.replace('<hr>', '')
   return props.post.Inhalt?.split('<hr>')[0]
 })
