@@ -4,7 +4,7 @@
       <div id="sib-form-container" class="sib-form-container">
         <div id="sib-container" class="sib-container--large sib-container--vertical">
           <form id="sib-form" method="POST"
-            action="https://3a9f4d41.sibforms.com/serve/MUIEABILml20CIoyT1X6peOMMDKSUhnMRMey9uQENiIWgD5KC3gr6OzT294ztWoQgmofNNXLjT7_qeCxPPUNk-bNss-4KgOiE33P6E3X4ALeYcUZno0tZoggz_586xAYVl7xSJU0LX5E-sWhsHp_ojPXmGOek7oLZmvhjovdA1a3e35oXm2AMVZc0bH8PKp1Mki0w2AnrAB3C4Dt">
+            action="https://3a9f4d41.sibforms.com/serve/MUIEAHFawyOyxd7tW6JMmxt614mz_5Pc2FhZ6FP1PdFKYMozzNZdvAGAEARWXOAjIa7NohBBb8rgtWWRf1NRjAD_xov7qsuEFGXfxFU9ETLCHpFuwu7akIRrobIyi5ooXszeeKs1JJn9mtD1H95zbqkEGng7PRELwpk_4V7PM_AckZ0aL-c1ctzit-wPZ7b2j_8yBRvNY1OwKBeV">
             <div class="form-line">
               <input class="input" maxlength="200" type="text" id="VORNAME" name="VORNAME" autocomplete="off"
                 placeholder="Vorname" data-required="true" required />
@@ -13,10 +13,6 @@
             </div>
             <div class="form-line">
               <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="E-Mail"
-                data-required="true" required />
-            </div>
-            <div class="form-line">
-              <input type="tel" class="input" id="TELEFON" name="TELEFON" autocomplete="off" placeholder="Telefonnummer"
                 data-required="true" required />
             </div>
             <div class="form-line">
