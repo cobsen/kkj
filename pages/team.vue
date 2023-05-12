@@ -53,11 +53,13 @@ const { find } = useStrapi();
 const response2 = await useAsyncData("partners", () =>
     find<Partner>("partners", {
         populate: "Logo",
+        sort: 'rank'
     })
 );
 const response = await useAsyncData("teammitglieder", () =>
     find<Teammitglied>("teammitglieder", {
         populate: "Bild",
+        sort: 'rank'
     })
 );
 
@@ -81,7 +83,7 @@ h1 {
 
     .member {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 240px auto;
         grid-template-rows: auto auto;
         grid-template-areas:
             "image description"

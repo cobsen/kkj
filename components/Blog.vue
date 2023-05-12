@@ -13,6 +13,7 @@ const { find } = useStrapi();
 const response = await useAsyncData("blogeintrags", () =>
   find<Blogeintrag>("blogeintrags", {
     populate: ["Media", "InlineBilder"],
+    sort: 'rank'
   })
 );
 
