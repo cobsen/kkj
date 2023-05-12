@@ -1,6 +1,6 @@
 <template>
   <section>
-    <BlogPost :post="post.attributes" :id="route.params.id" :single="true" />
+    <BlogPost :post="post.attributes" :id="route.params.id" :single="true" v-if="post" />
   </section>
 </template>
 
@@ -11,14 +11,14 @@ import { computed } from "vue";
 const route = useRoute();
 const { findOne } = useStrapi();
 
-const response = await useAsyncData("blogeintrags", () =>
+const response = await useAsyncData("blogeintrag", () =>
   findOne<Blogeintrag>("blogeintrags", route.params.id, {
     populate: ["Media", "InlineBilder"],
   })
 );
 
 const post = computed(() => {
-  return response?.data.value?.data ?? [];
+  return response?.data.value?.data ?? false;
 });
 </script>
 
