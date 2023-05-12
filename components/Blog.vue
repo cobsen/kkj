@@ -18,7 +18,7 @@ const response = await useAsyncData("blogeintrags", () =>
 );
 
 const blogposts = computed(() => {
-  return response?.data.value?.data.slice(0, 5) ?? [];
+  return response?.data.value?.data?.slice(0, 5) ?? [];
 });
 </script>
 

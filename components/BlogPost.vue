@@ -50,7 +50,7 @@ const displayContent = computed(() => {
 })
 
 const date = computed(() => {
-  if (!props.post.datum) return ''
+  if (!props.post?.datum) return ''
   const months = [
     "Januar",
     "Februar",
