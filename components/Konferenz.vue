@@ -1,6 +1,6 @@
 <template>
   <section>
-    <img src="~/public/kkj.svg" alt="" />
+    <img src="~/public/kkj.svg" class="banner" alt="" />
     <div class="content" v-html="displayContent" />
 
     <div class="image-dummy">
@@ -69,6 +69,12 @@ section {
 
   img {
     border-radius: 0;
+
+    &.banner {
+
+      margin-right: 10px;
+      margin-top: 6px;
+    }
   }
 }
 </style>
