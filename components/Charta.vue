@@ -2,7 +2,7 @@
   <section class="divided">
     <div class="content" v-html="charta?.Inhalt" />
 
-    <PdfButton :url="charta.PDF?.data?.attributes?.url" label="hier geht es zum PDF"
+    <PdfButton :url="charta.PDF?.data?.attributes?.url" :label="charta.Button"
       v-if="charta?.PDF?.data?.attributes?.url" />
   </section>
 </template>

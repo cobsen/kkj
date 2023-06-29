@@ -11,11 +11,11 @@
       <div class="label">Programm</div>
     </div>
     <Programm />
-    <!--
     <div id="charta">
       <div class="label">Charta</div>
     </div>
     <Charta />
+    <!--
     <div id="studie">
       <div class="label">Studie</div>
     </div>
