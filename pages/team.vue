@@ -30,6 +30,32 @@
                 <div>{{ partner.attributes.Beschreibung }}</div>
             </div>
         </div>
+
+        <h1>Unser Sponsor</h1>
+        <div class="partners">
+            <div v-for="partner in sponsors" class="partner">
+                <nuxt-img :modifiers="{
+                    w: '200'
+                }" :src="'https://kkj-backend.perspective-daily.de' +
+    partner.attributes.Logo?.data?.attributes?.url
+    " alt="" width="200" />
+                <h4>{{ partner.attributes.Name }}</h4>
+                <div>{{ partner.attributes.Beschreibung }}</div>
+            </div>
+        </div>
+
+        <h1>Wir danken für die Unterstützung von</h1>
+        <div class="partners">
+            <div v-for="partner in kooppartners" class="partner">
+                <nuxt-img :modifiers="{
+                    w: '200'
+                }" :src="'https://kkj-backend.perspective-daily.de' +
+    partner.attributes.Logo?.data?.attributes?.url
+    " alt="" width="200" />
+                <h4>{{ partner.attributes.Name }}</h4>
+                <div>{{ partner.attributes.Beschreibung }}</div>
+            </div>
+        </div>
     </section>
 </template>
   
@@ -50,15 +76,23 @@ const { stop } = useIntersectionObserver(
 
 const { find } = useStrapi();
 
+const response = await useAsyncData("teammitglieder", () =>
+    find<Teammitglied>("teammitglieder", {
+        populate: "Bild",
+        sort: 'rank'
+    })
+);
+
 const response2 = await useAsyncData("partners", () =>
     find<Partner>("partners", {
         populate: "Logo",
         sort: 'rank'
     })
 );
-const response = await useAsyncData("teammitglieder", () =>
-    find<Teammitglied>("teammitglieder", {
-        populate: "Bild",
+
+const response3 = await useAsyncData("sponsors", () =>
+    find<Sponsor>("sponsors", {
+        populate: "Logo",
         sort: 'rank'
     })
 );
@@ -70,6 +104,16 @@ const members = computed(() => {
 const partners = computed(() => {
     return response2?.data.value?.data ?? [];
 });
+
+const sponsors = computed(() => {
+    return response3?.data.value?.data.filter((item) => item.attributes.Art === 'Sponsor') ?? [];
+});
+
+const kooppartners = computed(() => {
+    return response3?.data.value?.data.filter((item) => item.attributes.Art === 'Kooperationspartner') ?? [];
+});
+
+
 </script>
   
 <style lang="scss" scoped>
