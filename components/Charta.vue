@@ -2,13 +2,8 @@
   <section class="divided">
     <div class="content" v-html="charta?.Inhalt" />
 
-    <div class="showmore" @click="showFullPost()" v-if="!showAll">
-      <img src="../src/blog.svg" alt="rest des intros anzeigen" />
-    </div>
-    <template v-else>
-      <PdfButton :url="charta.PDF?.data?.attributes?.url" :label="charta.Button"
-        v-if="charta?.PDF?.data?.attributes?.url" />
-    </template>
+    <PdfButton :url="charta.PDF?.data?.attributes?.url" :label="charta.Button"
+      v-if="charta?.PDF?.data?.attributes?.url" />
   </section>
 </template>
 
@@ -33,23 +28,8 @@ const host = computed(() => {
   }
   return "https://kkj-backend.perspective-daily.de";
 });
-
-const showAll = ref(false);
-
-function showFullPost() {
-  showAll.value = true;
-}
 </script>
 
 <style lang="scss" scoped>
 section {}
-
-.showmore {
-  img {
-    max-width: 80%;
-    display: block;
-    margin: 32px auto 0;
-    cursor: pointer;
-  }
-}
 </style>
